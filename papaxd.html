@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Broma para Papá</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .question {
+            color: blue;
+            font-size: 2em;
+        }
+        .button {
+            margin: 20px;
+            padding: 20px 40px; /* Botones más grandes */
+            font-size: 2em; /* Texto del botón más grande */
+        }
+    </style>
+    <script>
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - 100); /* Restringir el movimiento en el eje X */
+            var y = Math.random() * (window.innerHeight - 100); /* Restringir el movimiento en el eje Y */
+            var btn = document.getElementById('noButton');
+            btn.style.position = 'absolute';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+        function showMessage() {
+            var msg = document.getElementById('message');
+            msg.style.display = 'block'; /* Muestra el mensaje */
+        }
+    </script>
+</head>
+<body>
+    <p class="question">¿Compramos churrascos?</p>
+    <button class="button" onclick="showMessage()">Sí</button>
+    <button id="noButton" class="button" onmouseover="moveButton()">No</button>
+    <p id="message" style="display: none;">Es broma, tenemos pollito y ensalada para la noche jeje</p> <!-- Mensaje oculto -->
+</body>
+</html>
+
+
+
+
